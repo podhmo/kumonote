@@ -10,8 +10,8 @@ target_request:
 driver:
   main: "kumonote.sandbox.drivers:main"
   loop: "asyncio:get_event_loop"
-  loop_main: "kumonote.sandbox.drivers.simple_loop:nowait_concurrent_loop"
-  fetch: "kumonote.sandbox.testing:mock_fetch"
+  loop_main: "kumonote.sandbox.drivers.nowait:do_loop_concurrently"
+  fetch: "kumonote.sandbox.fetching:fetch_only"
 
 logging:
   format: "%(asctime)s %(message)s"

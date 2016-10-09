@@ -5,7 +5,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-async def nowait_single_chain_loop(requests, fetch):
+async def do_loop_single_chain(requests, fetch):
     todo = []
     done = []
     st = time.time()
@@ -18,22 +18,7 @@ async def nowait_single_chain_loop(requests, fetch):
     logger.info("takes %s, total %s", time.time() - st, len(done))
 
 
-async def wait_single_chain_loop(requests, fetch):
-    todo = []
-    done = []
-    st = time.time()
-    todo.extend(requests)
-    while todo:
-        r = todo.pop()
-        response = await fetch(r)
-        logger.info("sleep 1")
-        await asyncio.sleep(1)
-        done.append(r)
-        todo.extend(await response.get_links())
-    logger.info("takes %s, total %s", time.time() - st, len(done))
-
-
-async def nowait_concurrent_loop(requests, fetch):
+async def do_loop_concurrently(requests, fetch):
     todo = []
     st = time.time()
     todo.extend(requests)
