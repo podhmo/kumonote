@@ -1,0 +1,118 @@
+python -m kumonote.sandbox --config config/dos-attack.yaml --override config/override/same-domain-limitter.yaml
+2016-10-10 08:09:55,121 Using selector: KqueueSelector
+2016-10-10 08:09:55,124 L request: example.c.info
+2016-10-10 08:09:55,124 R fetch start   : http://example.c.info, cost=0.2
+2016-10-10 08:09:55,125 L request: example.a.net
+2016-10-10 08:09:55,125 R fetch start   : http://example.a.net, cost=0.2
+2016-10-10 08:09:55,125 L request: example.b.com
+2016-10-10 08:09:55,125 R fetch start   : http://example.b.com, cost=0.2
+2016-10-10 08:09:55,324 R fetch end     : http://example.c.info
+2016-10-10 08:09:55,325 R get link start: http://example.c.info, cost=0.1
+2016-10-10 08:09:55,325 R fetch end     : http://example.a.net
+2016-10-10 08:09:55,325 R get link start: http://example.a.net, cost=0.1
+2016-10-10 08:09:55,325 R fetch end     : http://example.b.com
+2016-10-10 08:09:55,326 R get link start: http://example.b.com, cost=0.1
+2016-10-10 08:09:55,429 R get link end  : http://example.c.info
+2016-10-10 08:09:55,429 R get link end  : http://example.a.net
+2016-10-10 08:09:55,430 R get link end  : http://example.b.com
+2016-10-10 08:09:55,530 L request: example.c.info
+2016-10-10 08:09:55,530 R fetch start   : http://example.c.info/a, cost=0.2
+2016-10-10 08:09:55,531 L request: example.c.info
+2016-10-10 08:09:55,532 L *wait**: example.c.info, waittime=1, (2/2)
+2016-10-10 08:09:55,533 L request: example.a.net
+2016-10-10 08:09:55,534 R fetch start   : http://example.a.net/a, cost=0.2
+2016-10-10 08:09:55,535 L request: example.a.net
+2016-10-10 08:09:55,536 L *wait**: example.a.net, waittime=1, (2/2)
+2016-10-10 08:09:55,734 R fetch end     : http://example.c.info/a
+2016-10-10 08:09:55,735 L request: example.c.info
+2016-10-10 08:09:55,735 L *wait**: example.c.info, waittime=1, (2/2)
+2016-10-10 08:09:55,735 R get link start: http://example.c.info/a, cost=0.1
+2016-10-10 08:09:55,735 R fetch end     : http://example.a.net/a
+2016-10-10 08:09:55,736 L request: example.a.net
+2016-10-10 08:09:55,736 L *wait**: example.a.net, waittime=1, (2/2)
+2016-10-10 08:09:55,736 R get link start: http://example.a.net/a, cost=0.1
+2016-10-10 08:09:55,839 R get link end  : http://example.c.info/a
+2016-10-10 08:09:55,839 R get link end  : http://example.a.net/a
+2016-10-10 08:09:56,536 R fetch start   : http://example.c.info/b, cost=0.2
+2016-10-10 08:09:56,542 R fetch start   : http://example.a.net/b, cost=0.2
+2016-10-10 08:09:56,739 R fetch start   : http://example.c.info/c, cost=0.2
+2016-10-10 08:09:56,740 R fetch start   : http://example.a.net/c, cost=0.2
+2016-10-10 08:09:56,741 R fetch end     : http://example.c.info/b
+2016-10-10 08:09:56,741 L request: example.c.info
+2016-10-10 08:09:56,741 R fetch start   : http://example.c.info/a/a, cost=0.2
+2016-10-10 08:09:56,742 R get link start: http://example.c.info/b, cost=0.1
+2016-10-10 08:09:56,743 R fetch end     : http://example.a.net/b
+2016-10-10 08:09:56,743 L request: example.a.net
+2016-10-10 08:09:56,743 R fetch start   : http://example.a.net/a/a, cost=0.2
+2016-10-10 08:09:56,744 R get link start: http://example.a.net/b, cost=0.1
+2016-10-10 08:09:56,843 R get link end  : http://example.c.info/b
+2016-10-10 08:09:56,845 R get link end  : http://example.a.net/b
+2016-10-10 08:09:56,943 R fetch end     : http://example.c.info/c
+2016-10-10 08:09:56,943 R fetch end     : http://example.a.net/c
+2016-10-10 08:09:56,944 R fetch end     : http://example.c.info/a/a
+2016-10-10 08:09:56,945 L request: example.c.info
+2016-10-10 08:09:56,945 R fetch start   : http://example.c.info/a/b, cost=0.2
+2016-10-10 08:09:56,946 L request: example.a.net
+2016-10-10 08:09:56,946 L *wait**: example.a.net, waittime=1, (2/2)
+2016-10-10 08:09:56,946 L request: example.c.info
+2016-10-10 08:09:56,947 L *wait**: example.c.info, waittime=1, (2/2)
+2016-10-10 08:09:56,947 R get link start: http://example.c.info/c, cost=0.1
+2016-10-10 08:09:56,947 R get link start: http://example.a.net/c, cost=0.1
+2016-10-10 08:09:56,947 R get link start: http://example.c.info/a/a, cost=0.1
+2016-10-10 08:09:56,948 R fetch end     : http://example.a.net/a/a
+2016-10-10 08:09:56,948 L request: example.a.net
+2016-10-10 08:09:56,948 L *wait**: example.a.net, waittime=1, (2/2)
+2016-10-10 08:09:56,949 R get link start: http://example.a.net/a/a, cost=0.1
+2016-10-10 08:09:57,052 R get link end  : http://example.c.info/c
+2016-10-10 08:09:57,053 R get link end  : http://example.a.net/c
+2016-10-10 08:09:57,053 R get link end  : http://example.c.info/a/a
+2016-10-10 08:09:57,054 R get link end  : http://example.a.net/a/a
+2016-10-10 08:09:57,149 R fetch end     : http://example.c.info/a/b
+2016-10-10 08:09:57,150 L request: example.c.info
+2016-10-10 08:09:57,150 L *wait**: example.c.info, waittime=1, (2/2)
+2016-10-10 08:09:57,151 R get link start: http://example.c.info/a/b, cost=0.1
+2016-10-10 08:09:57,256 R get link end  : http://example.c.info/a/b
+2016-10-10 08:09:57,948 R fetch start   : http://example.a.net/a/b, cost=0.2
+2016-10-10 08:09:57,948 R fetch start   : http://example.c.info/a/c, cost=0.2
+2016-10-10 08:09:57,949 R fetch start   : http://example.a.net/a/c, cost=0.2
+2016-10-10 08:09:58,150 R fetch end     : http://example.a.net/a/b
+2016-10-10 08:09:58,150 R fetch end     : http://example.c.info/a/c
+2016-10-10 08:09:58,151 R fetch end     : http://example.a.net/a/c
+2016-10-10 08:09:58,151 L request: example.a.net
+2016-10-10 08:09:58,152 R fetch start   : http://example.a.net/b/b, cost=0.2
+2016-10-10 08:09:58,152 L request: example.c.info
+2016-10-10 08:09:58,152 R fetch start   : http://example.c.info/b/c, cost=0.2
+2016-10-10 08:09:58,153 L request: example.a.net
+2016-10-10 08:09:58,153 L *wait**: example.a.net, waittime=1, (2/2)
+2016-10-10 08:09:58,154 R get link start: http://example.a.net/a/b, cost=0.1
+2016-10-10 08:09:58,154 R get link start: http://example.c.info/a/c, cost=0.1
+2016-10-10 08:09:58,154 R get link start: http://example.a.net/a/c, cost=0.1
+2016-10-10 08:09:58,155 R fetch start   : http://example.c.info/b/b, cost=0.2
+2016-10-10 08:09:58,254 R get link end  : http://example.a.net/a/b
+2016-10-10 08:09:58,255 R get link end  : http://example.c.info/a/c
+2016-10-10 08:09:58,255 R get link end  : http://example.a.net/a/c
+2016-10-10 08:09:58,353 R fetch end     : http://example.a.net/b/b
+2016-10-10 08:09:58,353 L request: example.a.net
+2016-10-10 08:09:58,353 L *wait**: example.a.net, waittime=1, (2/2)
+2016-10-10 08:09:58,354 R fetch end     : http://example.c.info/b/c
+2016-10-10 08:09:58,354 R get link start: http://example.a.net/b/b, cost=0.1
+2016-10-10 08:09:58,354 L request: example.c.info
+2016-10-10 08:09:58,354 R fetch start   : http://example.c.info/c/c, cost=0.2
+2016-10-10 08:09:58,355 R get link start: http://example.c.info/b/c, cost=0.1
+2016-10-10 08:09:58,355 R fetch end     : http://example.c.info/b/b
+2016-10-10 08:09:58,355 R get link start: http://example.c.info/b/b, cost=0.1
+2016-10-10 08:09:58,458 R get link end  : http://example.a.net/b/b
+2016-10-10 08:09:58,458 R get link end  : http://example.c.info/b/c
+2016-10-10 08:09:58,458 R get link end  : http://example.c.info/b/b
+2016-10-10 08:09:58,557 R fetch end     : http://example.c.info/c/c
+2016-10-10 08:09:58,557 R get link start: http://example.c.info/c/c, cost=0.1
+2016-10-10 08:09:58,658 R get link end  : http://example.c.info/c/c
+2016-10-10 08:09:59,154 R fetch start   : http://example.a.net/b/c, cost=0.2
+2016-10-10 08:09:59,357 R fetch start   : http://example.a.net/c/c, cost=0.2
+2016-10-10 08:09:59,358 R fetch end     : http://example.a.net/b/c
+2016-10-10 08:09:59,358 R get link start: http://example.a.net/b/c, cost=0.1
+2016-10-10 08:09:59,462 R get link end  : http://example.a.net/b/c
+2016-10-10 08:09:59,561 R fetch end     : http://example.a.net/c/c
+2016-10-10 08:09:59,562 R get link start: http://example.a.net/c/c, cost=0.1
+2016-10-10 08:09:59,665 R get link end  : http://example.a.net/c/c
+2016-10-10 08:09:59,783 takes 4.659143924713135, total 21

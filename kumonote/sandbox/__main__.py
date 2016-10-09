@@ -2,8 +2,10 @@ import os.path
 import argparse
 import importlib
 import logging
-logger = logging.getLogger(__name__)
 from kumonote.loader import YAMLLoader
+
+
+logger = logging.getLogger(__name__)
 
 
 class Resolver:
@@ -44,11 +46,11 @@ class App:
         fmt = data.get("format")
         level = getattr(logging, data.get("level").upper(), None)
         logging.basicConfig(format=fmt, level=level)
-        if fmt:
-            logging.root.handlers[0].setFormatter(logging.Formatter(fmt=fmt))
-        if level:
-            logging.root.handlers[0].setLevel(level)
-            logging.root.setLevel(level)
+        # if fmt:
+        #     logging.root.handlers[0].setFormatter(logging.Formatter(fmt=fmt))
+        # if level:
+        #     logging.root.handlers[0].setLevel(level)
+        #     logging.root.setLevel(level)
 
     def run(self):
         config = self.config

@@ -11,7 +11,11 @@ driver:
   main: "kumonote.sandbox.drivers:main"
   loop: "asyncio:get_event_loop"
   loop_main: "kumonote.sandbox.drivers.wait_each_request:do_loop_single_chain"
-  fetch: "kumonote.sandbox.fetching:fetch_only"
+  fetcher: "kumonote.sandbox.fetching:Fetcher"
+
+fetcher:
+  get_key: "kumonote.sandbox.testing:get_domain"
+  get_response: "kumonote.sandbox.testing:get_response"
 
 logging:
   format: "%(asctime)s %(message)s"

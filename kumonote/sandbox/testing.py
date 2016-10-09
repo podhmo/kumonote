@@ -1,5 +1,7 @@
 import asyncio
 import logging
+from urllib.parse import urlparse
+
 logger = logging.getLogger(__name__)
 
 
@@ -28,7 +30,11 @@ class MockRequest:
         return r'MockRequest<url={!r}, links={}>'.format(self.url, len(self.links))
 
 
-async def mock_fetch(request):
+def get_domain(request):
+    return urlparse(request.url).netloc
+
+
+async def get_response(request):
     return await request.fetch()
 
 

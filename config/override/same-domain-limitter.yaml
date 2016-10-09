@@ -1,0 +1,7 @@
+driver:
+  fetcher: "kumonote.sandbox.fetching:LimittedFetcher"
+
+fetcher:
+  get_key: "kumonote.sandbox.testing:get_domain"
+  get_response: "kumonote.sandbox.testing:get_response"
+  same_domain_limit: 2
