@@ -1,87 +1,87 @@
-python -m kumonote.sandbox config/dos-attack.yaml
-2016-10-09 23:01:45,716 Using selector: KqueueSelector
-2016-10-09 23:01:45,718 R fetch start   : http://example.b.com, cost=0.2
-2016-10-09 23:01:45,718 R fetch start   : http://example.a.net, cost=0.2
-2016-10-09 23:01:45,718 R fetch start   : http://example.c.info, cost=0.2
-2016-10-09 23:01:45,919 R fetch end     : http://example.b.com
-2016-10-09 23:01:45,919 R fetch end     : http://example.a.net
-2016-10-09 23:01:45,919 R get link start: http://example.b.com, cost=0.1
-2016-10-09 23:01:45,920 R fetch end     : http://example.c.info
-2016-10-09 23:01:45,920 R get link start: http://example.a.net, cost=0.1
-2016-10-09 23:01:45,920 R get link start: http://example.c.info, cost=0.1
-2016-10-09 23:01:46,024 R get link end  : http://example.b.com
-2016-10-09 23:01:46,024 R get link end  : http://example.a.net
-2016-10-09 23:01:46,025 R get link end  : http://example.c.info
-2016-10-09 23:01:46,122 R fetch start   : http://example.a.net/a, cost=0.2
-2016-10-09 23:01:46,123 R fetch start   : http://example.a.net/b, cost=0.2
-2016-10-09 23:01:46,123 R fetch start   : http://example.a.net/c, cost=0.2
-2016-10-09 23:01:46,123 R fetch start   : http://example.c.info/a, cost=0.2
-2016-10-09 23:01:46,124 R fetch start   : http://example.c.info/b, cost=0.2
-2016-10-09 23:01:46,124 R fetch start   : http://example.c.info/c, cost=0.2
-2016-10-09 23:01:46,325 R fetch end     : http://example.a.net/a
-2016-10-09 23:01:46,326 R fetch end     : http://example.a.net/b
-2016-10-09 23:01:46,326 R fetch end     : http://example.a.net/c
-2016-10-09 23:01:46,327 R fetch end     : http://example.c.info/a
-2016-10-09 23:01:46,327 R fetch end     : http://example.c.info/b
-2016-10-09 23:01:46,328 R fetch end     : http://example.c.info/c
-2016-10-09 23:01:46,329 R get link start: http://example.a.net/a, cost=0.1
-2016-10-09 23:01:46,329 R get link start: http://example.a.net/b, cost=0.1
-2016-10-09 23:01:46,329 R get link start: http://example.a.net/c, cost=0.1
-2016-10-09 23:01:46,329 R get link start: http://example.c.info/a, cost=0.1
-2016-10-09 23:01:46,330 R get link start: http://example.c.info/b, cost=0.1
-2016-10-09 23:01:46,330 R get link start: http://example.c.info/c, cost=0.1
-2016-10-09 23:01:46,430 R get link end  : http://example.a.net/a
-2016-10-09 23:01:46,431 R get link end  : http://example.a.net/b
-2016-10-09 23:01:46,432 R get link end  : http://example.a.net/c
-2016-10-09 23:01:46,432 R get link end  : http://example.c.info/a
-2016-10-09 23:01:46,432 R get link end  : http://example.c.info/b
-2016-10-09 23:01:46,433 R get link end  : http://example.c.info/c
-2016-10-09 23:01:46,529 R fetch start   : http://example.a.net/a/a, cost=0.2
-2016-10-09 23:01:46,529 R fetch start   : http://example.a.net/a/b, cost=0.2
-2016-10-09 23:01:46,530 R fetch start   : http://example.a.net/a/c, cost=0.2
-2016-10-09 23:01:46,530 R fetch start   : http://example.a.net/b/b, cost=0.2
-2016-10-09 23:01:46,530 R fetch start   : http://example.a.net/b/c, cost=0.2
-2016-10-09 23:01:46,531 R fetch start   : http://example.a.net/c/c, cost=0.2
-2016-10-09 23:01:46,531 R fetch start   : http://example.c.info/a/a, cost=0.2
-2016-10-09 23:01:46,532 R fetch start   : http://example.c.info/a/b, cost=0.2
-2016-10-09 23:01:46,532 R fetch start   : http://example.c.info/a/c, cost=0.2
-2016-10-09 23:01:46,532 R fetch start   : http://example.c.info/b/b, cost=0.2
-2016-10-09 23:01:46,533 R fetch start   : http://example.c.info/b/c, cost=0.2
-2016-10-09 23:01:46,533 R fetch start   : http://example.c.info/c/c, cost=0.2
-2016-10-09 23:01:46,732 R fetch end     : http://example.a.net/a/a
-2016-10-09 23:01:46,732 R fetch end     : http://example.a.net/a/b
-2016-10-09 23:01:46,733 R fetch end     : http://example.a.net/a/c
-2016-10-09 23:01:46,733 R fetch end     : http://example.a.net/b/b
-2016-10-09 23:01:46,734 R fetch end     : http://example.a.net/b/c
-2016-10-09 23:01:46,735 R fetch end     : http://example.a.net/c/c
-2016-10-09 23:01:46,735 R fetch end     : http://example.c.info/a/a
-2016-10-09 23:01:46,735 R get link start: http://example.a.net/a/a, cost=0.1
-2016-10-09 23:01:46,736 R get link start: http://example.a.net/a/b, cost=0.1
-2016-10-09 23:01:46,736 R get link start: http://example.a.net/a/c, cost=0.1
-2016-10-09 23:01:46,736 R get link start: http://example.a.net/b/b, cost=0.1
-2016-10-09 23:01:46,737 R get link start: http://example.a.net/b/c, cost=0.1
-2016-10-09 23:01:46,737 R fetch end     : http://example.c.info/a/b
-2016-10-09 23:01:46,737 R fetch end     : http://example.c.info/a/c
-2016-10-09 23:01:46,738 R fetch end     : http://example.c.info/b/b
-2016-10-09 23:01:46,738 R fetch end     : http://example.c.info/b/c
-2016-10-09 23:01:46,738 R fetch end     : http://example.c.info/c/c
-2016-10-09 23:01:46,738 R get link start: http://example.a.net/c/c, cost=0.1
-2016-10-09 23:01:46,739 R get link start: http://example.c.info/a/a, cost=0.1
-2016-10-09 23:01:46,739 R get link start: http://example.c.info/a/b, cost=0.1
-2016-10-09 23:01:46,739 R get link start: http://example.c.info/a/c, cost=0.1
-2016-10-09 23:01:46,740 R get link start: http://example.c.info/b/b, cost=0.1
-2016-10-09 23:01:46,740 R get link start: http://example.c.info/b/c, cost=0.1
-2016-10-09 23:01:46,740 R get link start: http://example.c.info/c/c, cost=0.1
-2016-10-09 23:01:46,839 R get link end  : http://example.a.net/a/a
-2016-10-09 23:01:46,839 R get link end  : http://example.a.net/a/b
-2016-10-09 23:01:46,840 R get link end  : http://example.a.net/a/c
-2016-10-09 23:01:46,840 R get link end  : http://example.a.net/b/b
-2016-10-09 23:01:46,841 R get link end  : http://example.a.net/b/c
-2016-10-09 23:01:46,842 R get link end  : http://example.a.net/c/c
-2016-10-09 23:01:46,842 R get link end  : http://example.c.info/a/a
-2016-10-09 23:01:46,843 R get link end  : http://example.c.info/a/b
-2016-10-09 23:01:46,843 R get link end  : http://example.c.info/a/c
-2016-10-09 23:01:46,843 R get link end  : http://example.c.info/b/b
-2016-10-09 23:01:46,844 R get link end  : http://example.c.info/b/c
-2016-10-09 23:01:46,844 R get link end  : http://example.c.info/c/c
-2016-10-09 23:01:46,935 takes 1.2167918682098389, total 21
+python -m kumonote.sandbox --config config/dos-attack.yaml
+0.195451974868774 Using selector: KqueueSelector
+0.197551965713501 R fetch start   : http://example.a.net, cost=0.2
+0.197878837585449 R fetch start   : http://example.b.com, cost=0.2
+0.198120832443237 R fetch start   : http://example.c.info, cost=0.2
+0.398373842239380 R fetch end     : http://example.a.net
+0.398712873458862 R get link start: http://example.a.net, cost=0.1
+0.398901939392090 R fetch end     : http://example.b.com
+0.399094820022583 R fetch end     : http://example.c.info
+0.399562835693359 R get link start: http://example.b.com, cost=0.1
+0.399742841720581 R get link start: http://example.c.info, cost=0.1
+0.502635002136230 R get link end  : http://example.a.net
+0.503115892410278 R get link end  : http://example.b.com
+0.503722906112671 R get link end  : http://example.c.info
+0.601878881454468 R fetch start   : http://example.a.net/a, cost=0.2
+0.602379798889160 R fetch start   : http://example.a.net/b, cost=0.2
+0.602912902832031 R fetch start   : http://example.a.net/c, cost=0.2
+0.603554010391235 R fetch start   : http://example.c.info/a, cost=0.2
+0.603902816772461 R fetch start   : http://example.c.info/b, cost=0.2
+0.604210853576660 R fetch start   : http://example.c.info/c, cost=0.2
+0.804456949234009 R fetch end     : http://example.a.net/a
+0.804885864257812 R fetch end     : http://example.a.net/b
+0.805420875549316 R fetch end     : http://example.a.net/c
+0.806341886520386 R fetch end     : http://example.c.info/a
+0.806725978851318 R fetch end     : http://example.c.info/b
+0.807133913040161 R get link start: http://example.a.net/a, cost=0.1
+0.807493925094604 R get link start: http://example.a.net/b, cost=0.1
+0.807823896408081 R get link start: http://example.a.net/c, cost=0.1
+0.808338880538940 R fetch end     : http://example.c.info/c
+0.808657884597778 R get link start: http://example.c.info/a, cost=0.1
+0.809068918228149 R get link start: http://example.c.info/b, cost=0.1
+0.809523820877075 R get link start: http://example.c.info/c, cost=0.1
+0.908915996551514 R get link end  : http://example.a.net/a
+0.909225940704346 R get link end  : http://example.a.net/b
+0.909758806228638 R get link end  : http://example.a.net/c
+0.910612821578979 R get link end  : http://example.c.info/a
+0.910996913909912 R get link end  : http://example.c.info/b
+0.911689996719360 R get link end  : http://example.c.info/c
+1.007143974304199 R fetch start   : http://example.a.net/a/a, cost=0.2
+1.007411956787109 R fetch start   : http://example.a.net/a/b, cost=0.2
+1.007628917694092 R fetch start   : http://example.a.net/a/c, cost=0.2
+1.007833957672119 R fetch start   : http://example.a.net/b/b, cost=0.2
+1.008026838302612 R fetch start   : http://example.a.net/b/c, cost=0.2
+1.008212804794312 R fetch start   : http://example.a.net/c/c, cost=0.2
+1.008406877517700 R fetch start   : http://example.c.info/a/a, cost=0.2
+1.008595943450928 R fetch start   : http://example.c.info/a/b, cost=0.2
+1.008788824081421 R fetch start   : http://example.c.info/a/c, cost=0.2
+1.008985996246338 R fetch start   : http://example.c.info/b/b, cost=0.2
+1.009335994720459 R fetch start   : http://example.c.info/b/c, cost=0.2
+1.009626865386963 R fetch start   : http://example.c.info/c/c, cost=0.2
+1.211068868637085 R fetch end     : http://example.a.net/a/a
+1.211225986480713 R fetch end     : http://example.a.net/a/b
+1.211344957351685 R fetch end     : http://example.a.net/a/c
+1.211553812026978 R fetch end     : http://example.a.net/b/b
+1.211761951446533 R fetch end     : http://example.a.net/b/c
+1.212005853652954 R fetch end     : http://example.a.net/c/c
+1.212222814559937 R fetch end     : http://example.c.info/a/a
+1.212425947189331 R fetch end     : http://example.c.info/a/b
+1.212626934051514 R fetch end     : http://example.c.info/a/c
+1.212804794311523 R fetch end     : http://example.c.info/b/b
+1.213037967681885 R fetch end     : http://example.c.info/b/c
+1.213296890258789 R fetch end     : http://example.c.info/c/c
+1.214070796966553 R get link start: http://example.a.net/a/a, cost=0.1
+1.214247941970825 R get link start: http://example.a.net/a/b, cost=0.1
+1.214457988739014 R get link start: http://example.a.net/a/c, cost=0.1
+1.214618921279907 R get link start: http://example.a.net/b/b, cost=0.1
+1.214801788330078 R get link start: http://example.a.net/b/c, cost=0.1
+1.214946985244751 R get link start: http://example.a.net/c/c, cost=0.1
+1.215151786804199 R get link start: http://example.c.info/a/a, cost=0.1
+1.215328931808472 R get link start: http://example.c.info/a/b, cost=0.1
+1.215618848800659 R get link start: http://example.c.info/a/c, cost=0.1
+1.215825796127319 R get link start: http://example.c.info/b/b, cost=0.1
+1.216043949127197 R get link start: http://example.c.info/b/c, cost=0.1
+1.216286897659302 R get link start: http://example.c.info/c/c, cost=0.1
+1.318742990493774 R get link end  : http://example.a.net/a/a
+1.318933010101318 R get link end  : http://example.a.net/a/b
+1.319196939468384 R get link end  : http://example.a.net/a/c
+1.319542884826660 R get link end  : http://example.a.net/b/b
+1.319774866104126 R get link end  : http://example.a.net/b/c
+1.320152997970581 R get link end  : http://example.a.net/c/c
+1.320381879806519 R get link end  : http://example.c.info/a/a
+1.320600986480713 R get link end  : http://example.c.info/a/b
+1.320816993713379 R get link end  : http://example.c.info/a/c
+1.321039915084839 R get link end  : http://example.c.info/b/b
+1.321261882781982 R get link end  : http://example.c.info/b/c
+1.321481943130493 R get link end  : http://example.c.info/c/c
+1.414227962493896 takes 1.2168381214141846, total 21

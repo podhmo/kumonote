@@ -3,7 +3,7 @@ import argparse
 import importlib
 import logging
 from kumonote.loader import YAMLLoader
-
+from .. import loglib
 
 logger = logging.getLogger(__name__)
 
@@ -46,6 +46,8 @@ class App:
         fmt = data.get("format")
         level = getattr(logging, data.get("level").upper(), None)
         logging.basicConfig(format=fmt, level=level)
+        logging.setLogRecordFactory(loglib.LogRecordExtension)
+
         # if fmt:
         #     logging.root.handlers[0].setFormatter(logging.Formatter(fmt=fmt))
         # if level:

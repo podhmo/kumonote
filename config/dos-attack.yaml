@@ -19,5 +19,5 @@ fetcher:
 
 
 logging:
-  format: "%(asctime)s %(message)s"
+  format: "%(elapsed_time)17.15f %(message)s"
   level: "DEBUG"
