@@ -37,8 +37,8 @@ async def nowait_concurrent_loop(requests, fetch):
     todo = []
     st = time.time()
     todo.extend(requests)
-    futs = []
     running = []
+    done = []
 
     def callback(fut):
         running.pop()
@@ -49,6 +49,7 @@ async def nowait_concurrent_loop(requests, fetch):
     def callback2(fut):
         todo.extend(fut.result())
         running.pop()
+        done.append(object())
 
     while todo or running:
         targets = todo[:]
@@ -58,4 +59,4 @@ async def nowait_concurrent_loop(requests, fetch):
             running.append(object())
             fut.add_done_callback(callback)
         await asyncio.sleep(0.2)
-    logger.info("takes %s, total %s", time.time() - st, len(futs))
+    logger.info("takes %s, total %s", time.time() - st, len(done))

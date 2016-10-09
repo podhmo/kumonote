@@ -1,0 +1,108 @@
+python -m kumonote.sandbox config/worst.yaml
+2016-10-09 23:01:45,716 Using selector: KqueueSelector
+2016-10-09 23:01:45,718 R fetch start   : http://example.b.com, cost=0.2
+2016-10-09 23:01:45,919 R fetch end     : http://example.b.com
+2016-10-09 23:01:45,919 sleep 1
+2016-10-09 23:01:46,923 R get link start: http://example.b.com, cost=0.1
+2016-10-09 23:01:47,025 R get link end  : http://example.b.com
+2016-10-09 23:01:47,025 R fetch start   : http://example.a.net, cost=0.2
+2016-10-09 23:01:47,231 R fetch end     : http://example.a.net
+2016-10-09 23:01:47,231 sleep 1
+2016-10-09 23:01:48,235 R get link start: http://example.a.net, cost=0.1
+2016-10-09 23:01:48,341 R get link end  : http://example.a.net
+2016-10-09 23:01:48,341 R fetch start   : http://example.a.net/c, cost=0.2
+2016-10-09 23:01:48,543 R fetch end     : http://example.a.net/c
+2016-10-09 23:01:48,543 sleep 1
+2016-10-09 23:01:49,547 R get link start: http://example.a.net/c, cost=0.1
+2016-10-09 23:01:49,652 R get link end  : http://example.a.net/c
+2016-10-09 23:01:49,652 R fetch start   : http://example.a.net/c/c, cost=0.2
+2016-10-09 23:01:49,858 R fetch end     : http://example.a.net/c/c
+2016-10-09 23:01:49,858 sleep 1
+2016-10-09 23:01:50,859 R get link start: http://example.a.net/c/c, cost=0.1
+2016-10-09 23:01:50,964 R get link end  : http://example.a.net/c/c
+2016-10-09 23:01:50,964 R fetch start   : http://example.a.net/b, cost=0.2
+2016-10-09 23:01:51,167 R fetch end     : http://example.a.net/b
+2016-10-09 23:01:51,168 sleep 1
+2016-10-09 23:01:52,171 R get link start: http://example.a.net/b, cost=0.1
+2016-10-09 23:01:52,276 R get link end  : http://example.a.net/b
+2016-10-09 23:01:52,276 R fetch start   : http://example.a.net/b/c, cost=0.2
+2016-10-09 23:01:52,479 R fetch end     : http://example.a.net/b/c
+2016-10-09 23:01:52,479 sleep 1
+2016-10-09 23:01:53,484 R get link start: http://example.a.net/b/c, cost=0.1
+2016-10-09 23:01:53,589 R get link end  : http://example.a.net/b/c
+2016-10-09 23:01:53,589 R fetch start   : http://example.a.net/b/b, cost=0.2
+2016-10-09 23:01:53,792 R fetch end     : http://example.a.net/b/b
+2016-10-09 23:01:53,792 sleep 1
+2016-10-09 23:01:54,795 R get link start: http://example.a.net/b/b, cost=0.1
+2016-10-09 23:01:54,900 R get link end  : http://example.a.net/b/b
+2016-10-09 23:01:54,901 R fetch start   : http://example.a.net/a, cost=0.2
+2016-10-09 23:01:55,102 R fetch end     : http://example.a.net/a
+2016-10-09 23:01:55,102 sleep 1
+2016-10-09 23:01:56,104 R get link start: http://example.a.net/a, cost=0.1
+2016-10-09 23:01:56,208 R get link end  : http://example.a.net/a
+2016-10-09 23:01:56,208 R fetch start   : http://example.a.net/a/c, cost=0.2
+2016-10-09 23:01:56,411 R fetch end     : http://example.a.net/a/c
+2016-10-09 23:01:56,411 sleep 1
+2016-10-09 23:01:57,415 R get link start: http://example.a.net/a/c, cost=0.1
+2016-10-09 23:01:57,519 R get link end  : http://example.a.net/a/c
+2016-10-09 23:01:57,519 R fetch start   : http://example.a.net/a/b, cost=0.2
+2016-10-09 23:01:57,722 R fetch end     : http://example.a.net/a/b
+2016-10-09 23:01:57,723 sleep 1
+2016-10-09 23:01:58,727 R get link start: http://example.a.net/a/b, cost=0.1
+2016-10-09 23:01:58,827 R get link end  : http://example.a.net/a/b
+2016-10-09 23:01:58,827 R fetch start   : http://example.a.net/a/a, cost=0.2
+2016-10-09 23:01:59,031 R fetch end     : http://example.a.net/a/a
+2016-10-09 23:01:59,031 sleep 1
+2016-10-09 23:02:00,037 R get link start: http://example.a.net/a/a, cost=0.1
+2016-10-09 23:02:00,143 R get link end  : http://example.a.net/a/a
+2016-10-09 23:02:00,143 R fetch start   : http://example.c.info, cost=0.2
+2016-10-09 23:02:00,347 R fetch end     : http://example.c.info
+2016-10-09 23:02:00,347 sleep 1
+2016-10-09 23:02:01,351 R get link start: http://example.c.info, cost=0.1
+2016-10-09 23:02:01,456 R get link end  : http://example.c.info
+2016-10-09 23:02:01,456 R fetch start   : http://example.c.info/c, cost=0.2
+2016-10-09 23:02:01,659 R fetch end     : http://example.c.info/c
+2016-10-09 23:02:01,659 sleep 1
+2016-10-09 23:02:02,663 R get link start: http://example.c.info/c, cost=0.1
+2016-10-09 23:02:02,768 R get link end  : http://example.c.info/c
+2016-10-09 23:02:02,768 R fetch start   : http://example.c.info/c/c, cost=0.2
+2016-10-09 23:02:02,971 R fetch end     : http://example.c.info/c/c
+2016-10-09 23:02:02,971 sleep 1
+2016-10-09 23:02:03,975 R get link start: http://example.c.info/c/c, cost=0.1
+2016-10-09 23:02:04,080 R get link end  : http://example.c.info/c/c
+2016-10-09 23:02:04,080 R fetch start   : http://example.c.info/b, cost=0.2
+2016-10-09 23:02:04,285 R fetch end     : http://example.c.info/b
+2016-10-09 23:02:04,285 sleep 1
+2016-10-09 23:02:05,287 R get link start: http://example.c.info/b, cost=0.1
+2016-10-09 23:02:05,392 R get link end  : http://example.c.info/b
+2016-10-09 23:02:05,393 R fetch start   : http://example.c.info/b/c, cost=0.2
+2016-10-09 23:02:05,595 R fetch end     : http://example.c.info/b/c
+2016-10-09 23:02:05,596 sleep 1
+2016-10-09 23:02:06,599 R get link start: http://example.c.info/b/c, cost=0.1
+2016-10-09 23:02:06,704 R get link end  : http://example.c.info/b/c
+2016-10-09 23:02:06,704 R fetch start   : http://example.c.info/b/b, cost=0.2
+2016-10-09 23:02:06,908 R fetch end     : http://example.c.info/b/b
+2016-10-09 23:02:06,909 sleep 1
+2016-10-09 23:02:07,912 R get link start: http://example.c.info/b/b, cost=0.1
+2016-10-09 23:02:08,016 R get link end  : http://example.c.info/b/b
+2016-10-09 23:02:08,017 R fetch start   : http://example.c.info/a, cost=0.2
+2016-10-09 23:02:08,219 R fetch end     : http://example.c.info/a
+2016-10-09 23:02:08,219 sleep 1
+2016-10-09 23:02:09,221 R get link start: http://example.c.info/a, cost=0.1
+2016-10-09 23:02:09,326 R get link end  : http://example.c.info/a
+2016-10-09 23:02:09,327 R fetch start   : http://example.c.info/a/c, cost=0.2
+2016-10-09 23:02:09,532 R fetch end     : http://example.c.info/a/c
+2016-10-09 23:02:09,532 sleep 1
+2016-10-09 23:02:10,536 R get link start: http://example.c.info/a/c, cost=0.1
+2016-10-09 23:02:10,641 R get link end  : http://example.c.info/a/c
+2016-10-09 23:02:10,642 R fetch start   : http://example.c.info/a/b, cost=0.2
+2016-10-09 23:02:10,844 R fetch end     : http://example.c.info/a/b
+2016-10-09 23:02:10,844 sleep 1
+2016-10-09 23:02:11,848 R get link start: http://example.c.info/a/b, cost=0.1
+2016-10-09 23:02:11,953 R get link end  : http://example.c.info/a/b
+2016-10-09 23:02:11,954 R fetch start   : http://example.c.info/a/a, cost=0.2
+2016-10-09 23:02:12,156 R fetch end     : http://example.c.info/a/a
+2016-10-09 23:02:12,156 sleep 1
+2016-10-09 23:02:13,159 R get link start: http://example.c.info/a/a, cost=0.1
+2016-10-09 23:02:13,265 R get link end  : http://example.c.info/a/a
+2016-10-09 23:02:13,265 takes 27.54707407951355, total 21
