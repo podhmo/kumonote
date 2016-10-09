@@ -1,9 +1,9 @@
-import yaml
 import os.path
-from handofcats import as_command
+import argparse
 import importlib
 import logging
 logger = logging.getLogger(__name__)
+from kumonote.loader import YAMLLoader
 
 
 class Resolver:
@@ -64,14 +64,24 @@ def generate_config():
         print(rf.read())
 
 
-@as_command
-def main(config, init=False):
-    if init:
+def main():
+    # config, init=False
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-c", "--config", required=True)
+    parser.add_argument("--override", required=False, nargs="*", default=[])
+    parser.add_argument("--init", default=False, action="store_true")
+    args = parser.parse_args()
+    if args.init:
         return generate_config()
 
-    path = os.path.normpath(os.path.abspath(config))
+    path = os.path.normpath(os.path.abspath(args.config))
     if not os.path.exists(path):
         return generate_config()
-    with open(path) as rf:
-        return App(yaml.load(rf)).run()
+    loader = YAMLLoader()
+    config = loader.load(path)
+    for override_path in args.override:
+        config = loader.merge(config, override_path)
+    return App(config).run()
 
+if __name__ == "__main__":
+    main()

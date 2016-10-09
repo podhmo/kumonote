@@ -1,7 +1,9 @@
 best:
-	python -m kumonote.sandbox config/dos-attack.yaml
+	python -m kumonote.sandbox --config config/dos-attack.yaml
+best2:
+	python -m kumonote.sandbox --config config/dos-attack.yaml --override config/override/sample-requests2.yaml
 worst:
-	python -m kumonote.sandbox config/worst.yaml
+	python -m kumonote.sandbox --config config/worst.yaml
 
 result:
 	rm -rf result

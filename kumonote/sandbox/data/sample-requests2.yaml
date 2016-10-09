@@ -3,15 +3,15 @@ http://example.a.net:
     - http://example.a.net/a/a
     - http://example.a.net/a/b
     - http://example.a.net/a/c
-    - http://example.c.info/a:
+    - http://example.c.info/a
   - http://example.a.net/b:
     - http://example.a.net/b/b
     - http://example.a.net/b/c
-    - http://example.c.info/a:
+    - http://example.c.info/a
   - http://example.a.net/c:
     - http://example.a.net/c/c
-    - http://example.c.info/a:
-  - http://example.c.info/a:
+    - http://example.c.info/a
+  - http://example.c.info/a
 http://example.b.com: []
 http://example.c.info:
   - http://example.c.info/a:

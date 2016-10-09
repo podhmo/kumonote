@@ -33,22 +33,31 @@ async def mock_fetch(request):
 
 
 class MockRequestTreeBuilder:
-    def build(self, d):
+    def build(self, d, path=None):
         """
         input format sample
         {"a": [{"a/b": []}, {"a/c": []}]}
         """
+        path = path or []
         if isinstance(d, str):
             return [MockRequest(d)]
         elif hasattr(d, "items"):
             requests = []
             for url, chilren in d.items():
                 request = MockRequest(url)
-                for sub in chilren:
-                    request.links.extend(self.build(sub))
+                path.append(url)
+                try:
+                    for sub in chilren:
+                        request.links.extend(self.build(sub, path=path))
+                except TypeError as e:
+                    raise ValueError("expected list but {}. (in {})\noriginal: {}".format(chilren, path, e))
+                path.pop()
                 requests.append(request)
             return requests
         elif isinstance(d, (list, tuple)):
-            return [self.build(x) for x in d]
+            path.append("[]")
+            result = [self.build(x) for x in d]
+            path.pop()
+            return result
         else:
             raise TypeError("invalid value: {}".format(d))
