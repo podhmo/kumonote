@@ -1,21 +1,21 @@
-a:
-  - a/a:
-    - a/a/a
-    - a/a/b
-    - a/a/c
-  - a/b:
-    - a/b/b
-    - a/b/c
-  - a/c:
-    - a/c/c
-b: []
-c:
-  - c/a:
-    - c/a/a
-    - c/a/b
-    - c/a/c
-  - c/b:
-    - c/b/b
-    - c/b/c
-  - c/c:
-    - c/c/c
+http://example.a.net:
+  - http://example.a.net/a:
+    - http://example.a.net/a/a
+    - http://example.a.net/a/b
+    - http://example.a.net/a/c
+  - http://example.a.net/b:
+    - http://example.a.net/b/b
+    - http://example.a.net/b/c
+  - http://example.a.net/c:
+    - http://example.a.net/c/c
+http://example.b.com: []
+http://example.c.info:
+  - http://example.c.info/a:
+    - http://example.c.info/a/a
+    - http://example.c.info/a/b
+    - http://example.c.info/a/c
+  - http://example.c.info/b:
+    - http://example.c.info/b/b
+    - http://example.c.info/b/c
+  - http://example.c.info/c:
+    - http://example.c.info/c/c

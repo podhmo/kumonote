@@ -1,0 +1,18 @@
+basic:
+  path_type: "module"
+  description: "simplest mock request sample"
+
+target_request:
+  srcfile: "kumonote/sandbox/data/sample-requests.yaml"
+  loader: "kumonote.loader:YAMLLoader"
+  builder: "kumonote.sandbox.testing:MockRequestTreeBuilder"
+
+driver:
+  main: "kumonote.sandbox.drivers:main"
+  loop: "asyncio:get_event_loop"
+  loop_main: "kumonote.sandbox.drivers.simple_loop:wait_single_chain_loop"
+  fetch: "kumonote.sandbox.testing:mock_fetch"
+
+logging:
+  format: "%(asctime)s %(message)s"
+  level: "DEBUG"
